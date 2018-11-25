@@ -1,0 +1,1212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Robot', sans-serif;
+}
+
+header {
+    position: relative;
+    background-image: url('images/rectangle.png');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center right;
+}
+
+.burger {
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    font-size: 2.5rem;
+    color: #777;
+    transition: .3s linear;
+    z-index: 2;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.fas {
+    display: none;
+}
+
+i.show {
+    display: block;
+}
+
+.navbar.show {
+    top: 0;
+}
+
+.navbar {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    transition: .3s linear;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    padding: 15px 1%;
+    font-size: 1.5rem;
+}
+
+.navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.navbar .logo {
+    font-size: 2rem;
+}
+
+header p {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    right: 20%;
+    font-size: 1.6rem;
+    color: #777;
+    text-align: right;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+
+    .navbar li {
+        padding: 20px 1%;
+        font-size: 1.8rem;
+    }
+
+    .navbar .logo {
+        font-size: 2.3rem;
+    }
+
+
+    header p {
+        font-size: 2rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+
+    .burger {
+        top: 2%;
+        font-size: 3.2rem;
+    }
+
+    .navbar li {
+        padding: 20px 1%;
+        font-size: 2rem;
+    }
+
+    .navbar .logo {
+        font-size: 2.8rem;
+    }
+
+    header p {
+        bottom: 15%;
+        font-size: 2.5rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    header {
+        background-size: cover;
+    }
+
+    .burger {
+        font-size: 4.2rem;
+    }
+
+    .navbar li {
+        padding: 30px 1%;
+        font-size: 2.2rem;
+    }
+
+    .navbar li a {
+        letter-spacing: 3px;
+    }
+
+    .navbar .logo {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 4rem;
+    }
+}
+
+@media (orientation: landscape) {
+
+    header {
+        background-size: cover;
+    }
+
+    .burger {
+        top: 10%;
+        font-size: 4rem;
+    }
+
+    .navbar li {
+        font-size: 1.7rem;
+        padding: 10px 1%;
+    }
+
+    .navbar .logo {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 2rem;
+        bottom: 4%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .navbar li {
+        padding: 15px 1%;
+        font-size: 2rem;
+    }
+
+    .navbar .logo {
+        font-size: 3rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .burger {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+        transition: none;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    .navbar li {
+        padding: 50px 1%;
+        font-size: 2rem;
+    }
+
+    .navbar li a {
+        letter-spacing: 3px;
+        transition: .2s linear;
+    }
+
+    .navbar li a:hover {
+        color: #0E7FA6;
+    }
+
+    .navbar .logo {
+        font-size: 3rem;
+    }
+
+    header p {
+        left: 30%;
+        right: 15%;
+        bottom: 10%;
+        font-size: 3rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .navbar li {
+        padding: 50px 0;
+        font-size: 2.5rem;
+    }
+
+    .navbar .logo {
+        font-size: 3.5rem;
+    }
+
+    header p {
+        left: 40%;
+        right: 12%;
+        bottom: 10%;
+        font-size: 3rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .navbar li {
+        font-size: 2.8rem;
+    }
+
+    .navbar .logo {
+        font-size: 3.8rem;
+    }
+}
+
+.projects {
+    position: relative;
+    min-height: 100vh;
+    background-color: #efeee9b0;
+}
+
+.project_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 5% 30px;
+    background-color: #fff;
+}
+
+.project_wrap h2 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 5px;
+}
+
+.project_wrap p {
+    line-height: 130%;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+}
+
+.project_wrap button {
+    background-color: transparent;
+    border: 2px solid #222222;
+    color: #222222;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 8px 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+
+    .project_wrap {
+        width: 85%;
+    }
+
+    .project_wrap h2 {
+        font-size: 1.8rem;
+    }
+
+    .project_wrap p {
+        font-size: 1.4rem;
+        padding-bottom: 50px;
+    }
+
+    .project_wrap button {
+        font-size: 1.8rem;
+        padding: 8px 25px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+
+    .project_wrap h2 {
+        font-size: 2rem;
+    }
+
+    .project_wrap p {
+        font-size: 1.6rem;
+        padding-bottom: 70px;
+    }
+
+    .project_wrap button {
+        font-size: 2.2rem;
+        padding: 10px 28px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+
+    .project_wrap {
+        padding: 50px 10% 50px;
+    }
+
+    .project_wrap h2 {
+        padding-bottom: 40px;
+        font-size: 3rem;
+    }
+
+    .project_wrap p {
+        line-height: 140%;
+        font-size: 2.1rem;
+        padding-bottom: 60px;
+    }
+
+    .project_wrap button {
+        font-size: 2.5rem;
+        padding: 15px 30px;
+    }
+}
+
+@media (orientation: landscape) {
+    .projects {
+        min-height: 110vh;
+    }
+
+    .project_wrap {
+        width: 85%;
+    }
+
+    .project_wrap h2 {
+        font-size: 2.1rem;
+    }
+
+    .project_wrap p {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .project_wrap button {
+        font-size: 1.8rem;
+        padding: 12px 22px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .project_wrap h2 {
+        font-size: 2.5rem;
+    }
+
+    .project_wrap p {
+        font-size: 1.5rem;
+        padding-bottom: 25px;
+    }
+
+    .project_wrap button {
+        font-size: 1.8rem;
+        padding: 12px 30px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .project_wrap {
+        padding: 50px 5% 50px;
+    }
+
+    .project_wrap h2 {
+        padding-bottom: 40px;
+        font-size: 3.5rem;
+    }
+
+    .project_wrap p {
+        line-height: 140%;
+        font-size: 2rem;
+        padding-bottom: 100px;
+    }
+
+    .project_wrap button {
+        font-size: 2rem;
+        padding: 20px 50px;
+        transition: .2s linear;
+    }
+
+    .project_wrap button:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .projects_wrap {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .project_wrap {
+        padding: 50px 5% 50px;
+    }
+
+    .project_wrap h2 {
+        font-weight: 300;
+        letter-spacing: 2px;
+        padding: 80px 0 60px;
+        font-size: 4rem;
+    }
+
+    .project_wrap p {
+        line-height: 140%;
+        font-size: 1.7rem;
+        padding-bottom: 100px;
+    }
+
+    .project_wrap button {
+        font-size: 2rem;
+        padding: 20px 50px;
+        transition: .2s linear;
+    }
+
+    .project_wrap button:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .project_wrap {
+        width: 70%;
+    }
+}
+
+.image {
+    position: relative;
+}
+
+.image p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+}
+
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .image p {
+        font-size: 3.5rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: 50%;
+    }
+
+    .image p {
+        font-size: 2rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .image p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .image img {
+        transition: .3s linear;
+    }
+
+    .image p {
+        opacity: 0;
+        font-size: 2.8rem;
+        transition: .3s linear;
+
+    }
+
+    .image:hover p {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .image img:hover {
+        filter: brightness(20%);
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .image {
+        width: 33%;
+    }
+
+}
+
+.motto {
+    background-color: #efeee9b0;
+    text-align: center;
+}
+
+.motto h2 {
+    padding: 60px 5%;
+    font-size: 1.4rem;
+}
+
+
+@media (orientation: portrait) and (min-width: 360px) {
+    .motto h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .motto h2 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .motto h2 {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 3rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .motto h2 {
+        padding: 50px 8%;
+        font-size: 2rem;
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .motto h2 {
+        padding: 150px 15%;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .motto h2 {
+        padding: 150px 25%;
+        font-size: 3.2rem;
+    }
+}
+
+
+
+.right {
+    position: relative;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.about_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px auto;
+}
+
+.text {
+    margin-bottom: 50px;
+}
+
+.text h3 {
+    text-transform: uppercase;
+    padding: 10px 0 10px;
+    color: #6b568c;
+    font-size: 1.4rem;
+}
+
+.text p {
+    font-size: 1.2rem;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+
+    .text h3 {
+        font-size: 1.8rem;
+    }
+
+    .text p {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+
+    .text {
+        margin-bottom: 50px;
+    }
+
+    .text h3 {
+        padding-bottom: 15px;
+        font-size: 2.2rem;
+    }
+
+    .text p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+
+    .text {
+        margin-bottom: 60px;
+    }
+
+    .text h3 {
+        padding-bottom: 40px;
+        font-size: 3rem;
+    }
+
+    .text p {
+        font-size: 2.5rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .right {
+        min-height: 130vh;
+    }
+
+    .text {
+        margin-bottom: 60px;
+    }
+
+    .text h3 {
+        padding-bottom: 10px;
+        font-size: 1.7rem;
+    }
+
+    .text p {
+        font-size: 1.4rem;
+        padding: 0 2%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+
+    .text {
+        margin-bottom: 40px;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.7rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .about {
+        display: flex;
+    }
+
+    .left {
+        background-image: url(images/pic.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50%;
+    }
+
+    .right {
+        position: static;
+        text-align: left;
+        min-height: auto;
+        width: 50%;
+    }
+
+    .about_text {
+        position: static;
+        margin: 0 0;
+        transform: translate(0, 0);
+        padding: 100px 30% 100px 8%;
+    }
+
+    .text {
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    }
+
+    .text h3 {
+        padding: 0 0 10px;
+        font-size: 2.2rem;
+    }
+
+    .text p {
+        font-size: 1.6rem;
+        padding: 0 15% 0 0;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .text h3 {
+        font-size: 2.5rem;
+    }
+
+    .text p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .text h3 {
+        font-size: 2.7rem;
+    }
+
+    .text p {
+        font-size: 1.8rem;
+        padding: 0 25% 0 0;
+    }
+}
+
+.boxes {
+    background-color: #efeee9b0;
+}
+
+.box_wrap {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.box {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px 5% 25px;
+}
+
+.box h2 {
+    padding-bottom: 20px;
+}
+
+.box p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.box button {
+    background-color: transparent;
+    border: 2px solid #222222;
+    color: #222222;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 8px 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+
+    .box_wrap {
+        width: 85%;
+    }
+
+    .box button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+
+    .box_wrap {
+        width: 85%;
+        padding: 40px 0;
+    }
+
+    .box {
+        margin-bottom: 40px;
+        padding: 25px 5% 25px;
+    }
+
+    .box h2 {
+        padding-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .box p {
+        font-size: 1.5rem;
+        margin-bottom: 45px;
+    }
+
+    .box button {
+        font-size: 1.6rem;
+        padding: 8px 22px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .box_wrap {
+        padding: 50px 1%;
+    }
+
+    .box {
+        margin-bottom: 40px;
+        padding: 25px 10% 50px;
+    }
+
+    .box h2 {
+        padding-bottom: 25px;
+        font-size: 2.5rem;
+    }
+
+    .box p {
+        font-size: 2rem;
+        padding: 0 10%;
+        margin-bottom: 60px;
+    }
+
+    .box button {
+        font-size: 2rem;
+        padding: 13px 35px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .box_wrap {
+        width: 85%;
+    }
+
+
+    .box h2 {
+        font-size: 2.2rem;
+    }
+
+    .box p {
+        font-size: 1.5rem;
+    }
+
+    .box button {
+        font-size: 1.5rem;
+        padding: 10px 35px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .box h2 {
+        font-size: 2.2rem;
+        padding-bottom: 30px;
+    }
+
+    .box p {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+
+    .box button {
+        font-size: 1.7rem;
+        padding: 10px 35px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .box_wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        padding: 40px 0 60px;
+    }
+
+    .box {
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .box h2 {
+        padding-bottom: 20px;
+    }
+
+    .box p {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+    }
+
+    .box button {
+        font-size: 1.5rem;
+        padding: 10px 30px;
+        transition: .2s linear;
+    }
+
+    .box button:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+
+    .box p {
+        font-size: 1.5rem;
+    }
+
+    .box button {
+        font-size: 1.6rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .box_wrap {
+        width: 70%;
+    }
+}
+
+.map {
+    background-color: #353535;
+    color: #efeee9b0;
+}
+
+.map_text {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+    font-size: 1.3rem;
+}
+
+
+.map_text p:nth-child(2),
+.map_text p:nth-child(4) {
+    font-weight: bold;
+    color: white;
+}
+
+.map_text p:nth-child(1),
+.map_text p:nth-child(3),
+.map_text p:nth-child(5) {
+    padding-bottom: 15px;
+}
+
+.map_street {
+    display: none;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+
+    .map_text {
+        width: 85%;
+        padding: 30px 0 30px;
+        font-size: 1.5rem;
+    }
+
+    .map_text p:nth-child(1),
+    .map_text p:nth-child(3),
+    .map_text p:nth-child(5) {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .map_text {
+        width: 85%;
+        font-size: 1.8rem;
+    }
+
+    .map_text p:nth-child(1),
+    .map_text p:nth-child(3),
+    .map_text p:nth-child(5) {
+        padding-bottom: 25px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+
+    .map_text {
+        width: 85%;
+        padding: 30px 0 40px;
+        font-size: 2rem;
+    }
+
+    .map_text p:nth-child(1) {
+        width: 85%;
+    }
+
+    .map_text p:nth-child(1),
+    .map_text p:nth-child(3),
+    .map_text p:nth-child(5) {
+        padding-bottom: 30px;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .map_text {
+        width: 85%;
+        margin: 0 auto;
+        padding: 30px 0 40px;
+        font-size: 1.8rem;
+    }
+
+    .map_text p:nth-child(1),
+    .map_text p:nth-child(3),
+    .map_text p:nth-child(5) {
+        padding-bottom: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .map_wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .map_text {
+        width: 50%;
+        margin: 0;
+        padding: 50px 0 85px;
+        font-size: 1.8rem;
+    }
+
+    .map_text p:nth-child(1) {
+        padding-right: 15%;
+    }
+
+    .map_text p:nth-child(1),
+    .map_text p:nth-child(3),
+    .map_text p:nth-child(5) {
+        padding-bottom: 25px;
+    }
+
+    .map_street {
+        display: block;
+        background-image: url(images/map.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+    .map_text {
+        font-size: 2rem;
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .map_wrap {
+        width: 70%;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #efeee9b0;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 0;
+}
+
+.socials a {
+    font-size: 3rem;
+    color: black;
+}
+
+.footer_text {
+    display: none;
+}
+
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .socials a {
+        font-size: 3.5rem;
+    }
+}
+
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .socials a {
+        font-size: 3.5rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .socials a {
+        font-size: 4rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .socials {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0 25px;
+    }
+
+    .socials a {
+        font-size: 3rem;
+        color: #353535;
+    }
+
+    .footer_text {
+        display: block;
+        width: 50%;
+        text-align: right;
+        font-size: 2rem;
+    }
+
+    .socials a:hover {
+        color: black;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+
+    .socials a,
+    .footer_text {
+        font-size: 3.3rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1440px) {
+
+    .socials a,
+    .footer_text {
+        font-size: 3.5rem;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+    .footer_wrap {
+        width: 70%;
+    }
+
+    .socials a,
+    .footer_text {
+        font-size: 3rem;
+    }
+}
